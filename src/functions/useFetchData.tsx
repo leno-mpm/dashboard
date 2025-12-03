@@ -11,7 +11,7 @@ export default function useFetchData(): OpenMeteoResponse {
             try {
                 const response = await fetch(URL);
                 const json = await response.json();
-                setData(json); // 👉 actualiza el estado
+                setData(json); 
             } catch (error) {
                 console.error("Error al obtener datos:", error);
             }
