@@ -34,7 +34,7 @@ export default function useFetchData(): UseFetchResult {
                 if (err instanceof Error) {
                     setError(err.message);
                 } else {
-                    setError(String(error));
+                    setError(String(err));
                 }
 
             } finally {
