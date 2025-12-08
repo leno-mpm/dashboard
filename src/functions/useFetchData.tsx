@@ -9,7 +9,7 @@ interface UseFetchResult {
 
 
 export default function useFetchData(): UseFetchResult {
-    const URL = 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m';
+    const URL = 'https://api.open-meteo.com/v1/forecast?latitude=-2.1962&longitude=-79.8862&hourly=temperature_2m,wind_speed_10m&current=temperature_2m,relative_humidity_2m,apparent_temperature,wind_speed_10m';
 
     const [data, setData] = useState<OpenMeteoResponse | null>(null);
     const [loading, setLoading] = useState(true);

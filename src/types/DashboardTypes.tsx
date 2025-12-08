@@ -1,4 +1,3 @@
-
 export interface OpenMeteoResponse {
   latitude: number
   longitude: number
@@ -34,9 +33,11 @@ export interface Current {
 export interface HourlyUnits {
   time: string
   temperature_2m: string
+  wind_speed_10m: string
 }
 
 export interface Hourly {
   time: string[]
   temperature_2m: number[]
+  wind_speed_10m: number[]
 }
