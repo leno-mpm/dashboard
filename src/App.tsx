@@ -33,10 +33,10 @@ function App() {
         <Grid size={{ xs: 12, md: 3 }}><SelectorUI onOptionSelect={setSelectedOption} /></Grid>
 
         {/* Indicadores */}
-        <Grid container size={{ xs: 12, md: 9 }}>
-          {loading && <p>Cargando indicadores...</p>}
+        {loading && <p>Cargando indicadores...</p>}
           {error && <p>Error al cargar datos: {error}</p>}
-          {!loading && !error && data && (
+          {data && (<Grid container size={{ xs: 12, md: 9 }}>
+          
             <>
               <Grid size={{ xs: 12, md: 3 }}>
                 <IndicatorUI
@@ -63,8 +63,8 @@ function App() {
                 />
               </Grid>
             </>
-          )}
-        </Grid>
+         
+        </Grid> )}
 
 
 

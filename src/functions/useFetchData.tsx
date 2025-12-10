@@ -17,7 +17,7 @@ const CITY_COORDS: Record<string, { latitude: number; longitude: number }> = {
 export default function useFetchData(selectedOption: string | null): UseFetchResult{
 
     const [data, setData] = useState<OpenMeteoResponse | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const cityConfig = selectedOption != null? CITY_COORDS[selectedOption] : CITY_COORDS["Guayaquil"];
@@ -27,11 +27,12 @@ export default function useFetchData(selectedOption: string | null): UseFetchRes
    
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true);
+            
             setError(null);
 
             try {
                 const response = await fetch(URL);
+                setLoading(true);
                 if (!response.ok) {
                     throw new Error(`Error HTTPS: ${response.status}`);
                 }
