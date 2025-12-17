@@ -12,6 +12,7 @@ import useFetchData from './functions/useFetchData';
 import TableUI from './components/TableUI';
 import ChartUI from './components/ChartUI';
 
+//Nuevo
 
 function App() {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
